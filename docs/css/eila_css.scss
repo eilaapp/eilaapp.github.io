@@ -1,0 +1,127 @@
+@charset "utf-8";
+:root {
+  --primary-color: #424250;
+  --on-primary-color: white;
+  --on-primary-dark: #ADADB1;
+  --primary-color-medium: #33333D;
+  --primary-color-dark: #27272F;
+  --secondary-color: #f2f2f2;
+  --on-secondary-color: #4a4a4a;
+  --header-height: 2.5em;
+  --image-button-size: 1.5em;
+}
+
+body {
+  background: var(--secondary-color);
+  margin: 0;
+  font-family: Roboto;
+  font-size: 1em;
+  color: var(--on-secondary-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  padding: 5em 2em;
+}
+
+.eila-header {
+  background: var(--primary-color);
+  height: var(--header-height);
+  padding: 1em;
+  color: var(--on-primary-color);
+}
+
+.navbar {
+  // max-width: 80%;
+  // margin-left: auto;
+  // margin-right: auto;
+
+  .logo {
+    text-decoration: none;
+    width: var(--header-height);
+  }
+
+  .menu-button {
+    width: var(--image-button-size);
+    cursor: pointer;
+  }
+
+  .nav-bar-inner {
+    display: none;
+    text-transform: uppercase;
+    color: var(--on-primary-color);
+
+    a {
+      color: var(--on-primary-color);
+    }
+
+    .menu-close {
+      width: var(--image-button-size);
+      cursor: pointer;
+    }
+  }
+
+  .container {
+    display: flex;
+    place-content: space-between;
+  }
+}
+
+.main-body {
+  color: var(--on-secondary-color);
+}
+
+.eila-footer {
+  padding: 0em;
+  background: var(--primary-color-medium);
+  color: var(--on-primary-color);
+  font-size: 0.8em;
+
+  a {
+    color: var(--on-primary-color);
+  }
+
+  li {
+    margin-bottom: 2em;
+  }
+
+  .footer-top {
+    padding: 1em;
+  }
+
+  .bottom-section {
+    margin-bottom: 4em;
+  }
+
+  .bottom-heading {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--on-primary-dark);
+  }
+
+  .footer-bottom {
+    padding: 1em;
+    color: var(--on-primary-dark);
+    background: var(--primary-color-dark);
+  }
+}
+// .primary-nav {
+//   list-style-type: none;
+//   overflow: hidden;
+//
+// }
+// .eila-li {
+//   float: left;
+//   margin-right: 50px;
+//   vertical-align: middle;
+// }
