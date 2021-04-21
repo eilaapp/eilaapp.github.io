@@ -2,13 +2,14 @@
 :root {
   --primary-color: #424250;
   --on-primary-color: white;
-  --on-primary-dark: #ADADB1;
-  --primary-color-medium: #33333D;
-  --primary-color-dark: #27272F;
+  --on-primary-dark: #adadb1;
+  --primary-color-medium: #33333d;
+  --primary-color-dark: #27272f;
   --secondary-color: #f2f2f2;
   --on-secondary-color: #4a4a4a;
   --header-height: 2.5em;
   --image-button-size: 1.5em;
+  --main-content-width: 80%;
 }
 
 body {
@@ -23,6 +24,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -30,7 +35,7 @@ ul {
 }
 
 section {
-  padding: 5em 2em;
+  padding: 2em 2em;
 }
 
 .eila-header {
@@ -76,8 +81,23 @@ section {
   }
 }
 
+.main-content-area {
+  max-width: var(--main-content-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .main-body {
   color: var(--on-secondary-color);
+}
+
+.text-body-bulleted {
+  list-style-type: disc;
+  padding-left: 1em;
+
+  li {
+    margin-bottom: 1em;
+  }
 }
 
 .eila-footer {
@@ -110,9 +130,18 @@ section {
   }
 
   .footer-bottom {
-    padding: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
     color: var(--on-primary-dark);
     background: var(--primary-color-dark);
+
+    .footer-bottom-content {
+      // display: inline;
+      // content: " ";
+      // clear: both;
+      // box-sizing: border-box;
+      // float: left;
+    }
   }
 }
 // .primary-nav {
