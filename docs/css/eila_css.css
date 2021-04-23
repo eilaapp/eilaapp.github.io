@@ -40,8 +40,13 @@ section {
 .eila-header {
   background: var(--primary-color);
   height: var(--header-height);
-  padding: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
   color: var(--on-primary-color);
+}
+
+nav {
+  display: none;
 }
 
 .navbar .logo {
@@ -55,18 +60,34 @@ section {
 }
 
 .navbar .nav-bar-inner {
-  display: none;
-  text-transform: uppercase;
   color: var(--on-primary-color);
+  background: var(--primary-color);
+  position: fixed;
+  z-index: 999;
+  width: 60%;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  padding: 1em;
 }
 
 .navbar .nav-bar-inner a {
   color: var(--on-primary-color);
 }
 
-.navbar .nav-bar-inner .menu-close {
+.navbar .nav-bar-inner .menu-close-button {
+  float: right;
   width: var(--image-button-size);
   cursor: pointer;
+}
+
+.navbar .nav-bar-inner .primary-nav {
+  margin-top: 2em;
+}
+
+.navbar .nav-bar-inner li {
+  display: block;
+  padding: 1em;
 }
 
 .navbar .container {
@@ -74,6 +95,10 @@ section {
   display: -ms-flexbox;
   display: flex;
   place-content: space-between;
+}
+
+.nav-bar-show {
+  display: block;
 }
 
 .main-content-area {
@@ -93,6 +118,43 @@ section {
 
 .text-body-bulleted li {
   margin-bottom: 1em;
+}
+
+@media only screen and (min-width: 768px) {
+  .menu-button,
+  .menu-close-button {
+    display: none;
+  }
+  .navbar .container {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+  }
+  .navbar .nav-bar-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background: none;
+    position: unset;
+    height: auto;
+    width: 100%;
+    padding: 0;
+  }
+  .navbar .nav-bar-inner ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navbar .nav-bar-inner .primary-nav {
+    margin: 0;
+  }
 }
 
 .eila-footer {

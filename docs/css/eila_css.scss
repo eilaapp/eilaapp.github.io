@@ -10,6 +10,10 @@
   --header-height: 2.5em;
   --image-button-size: 1.5em;
   --main-content-width: 80%;
+  
+  // @media only screen and (max-width: 768px) {
+  //   --main-content-width: 100%;
+  // }
 }
 
 body {
@@ -25,7 +29,7 @@ a {
 }
 
 a:hover {
-  text-decoration: underline
+  text-decoration: underline;
 }
 
 ul {
@@ -41,15 +45,22 @@ section {
 .eila-header {
   background: var(--primary-color);
   height: var(--header-height);
-  padding: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
   color: var(--on-primary-color);
+  //position: fixed;
+  //width: 100%;
 }
 
-.navbar {
-  // max-width: 80%;
-  // margin-left: auto;
-  // margin-right: auto;
+nav {
+  display: none;
+}
 
+// .hero {
+//   padding-top: var(--header-height);
+// }
+
+.navbar {
   .logo {
     text-decoration: none;
     width: var(--header-height);
@@ -61,17 +72,34 @@ section {
   }
 
   .nav-bar-inner {
-    display: none;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     color: var(--on-primary-color);
+    background: var(--primary-color);
+    position: fixed;
+    z-index: 999;
+    width: 60%;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    padding: 1em;
 
     a {
       color: var(--on-primary-color);
     }
 
-    .menu-close {
+    .menu-close-button {
+      float: right;
       width: var(--image-button-size);
       cursor: pointer;
+    }
+
+    .primary-nav {
+      margin-top: 2em;
+    }
+
+    li {
+      display: block;
+      padding: 1em;
     }
   }
 
@@ -79,6 +107,10 @@ section {
     display: flex;
     place-content: space-between;
   }
+}
+
+.nav-bar-show {
+  display: block;
 }
 
 .main-content-area {
@@ -97,6 +129,37 @@ section {
 
   li {
     margin-bottom: 1em;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .menu-button,
+  .menu-close-button {
+    display: none;
+  }
+
+  .navbar .container {
+    display: grid;
+    justify-content: unset;
+    grid-template-columns: auto auto;
+  }
+
+  .navbar .nav-bar-inner {
+    display: flex;
+    justify-content: space-between;
+    background: none;
+    position: unset;
+    height: auto;
+    width: 100%;
+    padding: 0;
+
+    ul {
+      display: flex;
+    }
+
+    .primary-nav {
+      margin: 0;
+    }
   }
 }
 
@@ -134,23 +197,5 @@ section {
     padding-bottom: 1em;
     color: var(--on-primary-dark);
     background: var(--primary-color-dark);
-
-    .footer-bottom-content {
-      // display: inline;
-      // content: " ";
-      // clear: both;
-      // box-sizing: border-box;
-      // float: left;
-    }
   }
 }
-// .primary-nav {
-//   list-style-type: none;
-//   overflow: hidden;
-//
-// }
-// .eila-li {
-//   float: left;
-//   margin-right: 50px;
-//   vertical-align: middle;
-// }

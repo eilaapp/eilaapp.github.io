@@ -10,7 +10,7 @@
 
 <body>
   <header class="eila-header">
-    <div id="navbar" class="navbar">
+    <div id="navbar" class="navbar main-content-area">
       <div class="container">
         <a class="logo" href="#">
           <img id="logo-button" class="logo" src="./images/logo_transparent.svg" alt="Home">
@@ -18,8 +18,8 @@
 
         <img id="menu-button" class="menu-button" src="./images/menu.svg" alt="Menu">
 
-        <nav class="nav-bar-inner">
-          <img id="menu-close" class="menu-close" src="./images/close.svg" alt="Close">
+        <nav id="nav-bar-inner" class="nav-bar-inner">
+          <img id="menu-close-button" class="menu-close-button" src="./images/close.svg" alt="Close">
 
           <ul class="primary-nav">
             <li><a href="#">Features</a></li>
@@ -28,7 +28,7 @@
           </ul>
 
           <ul class="secondary-nav">
-            <li><a href="#">Help us Translate</a></li>
+            <li><a href="#">Help Translate</a></li>
             <li><a href="#">Download</a></li>
           </ul>
         </nav>
@@ -117,6 +117,20 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    const menuButton = document.getElementById('menu-button');
+    const menuCloseButton = document.getElementById('menu-close-button');
+    const navBarInner = document.getElementById('nav-bar-inner');
+
+    menuButton.addEventListener('click', () => {
+      navBarInner.classList.add('nav-bar-show');
+    });
+
+    menuCloseButton.addEventListener('click', () => {
+      navBarInner.classList.remove('nav-bar-show');
+    });
+  </script>
 </body>
 
 </html>
