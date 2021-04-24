@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EILA User Manual</title>
+  <title>EILA Finance Manager</title>
   <link href="./css/eila_css.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -19,17 +19,17 @@
         <img id="menu-button" class="menu-button" src="./images/menu.svg" alt="Menu">
 
         <nav id="nav-bar-inner" class="nav-bar-inner">
-          <img id="menu-close-button" class="menu-close-button" src="./images/close.svg" alt="Close">
+          <div class="menu-header">
+            <img id="logo-menu" class="logo-menu" src="./images/logo_transparent.svg" alt="Home">
+            <img id="menu-close-button" class="menu-close-button" src="./images/close.svg" alt="Close">
+          </div>
 
           <ul class="primary-nav">
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Download</a></li>
-            <li><a href="#">Help Center</a></li>
-          </ul>
-
-          <ul class="secondary-nav">
-            <li><a href="#">Help Translate</a></li>
-            <li><a href="#">Download</a></li>
+            <li><a href="#" id="menu-button-features">Features</a></li>
+            <li><a href="#" id="menu-button-help">Help Center</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.burusho.eila" target="_blank"
+                id="menu-button-download">Download</a></li>
+            <li><a href="mailto:eila.burusho@gmail.com" id="menu-button-translate">Help Translate</a></li>
           </ul>
         </nav>
       </div>
@@ -119,15 +119,28 @@
   </footer>
 
   <script>
-    const menuButton = document.getElementById('menu-button');
-    const menuCloseButton = document.getElementById('menu-close-button');
     const navBarInner = document.getElementById('nav-bar-inner');
-
-    menuButton.addEventListener('click', () => {
+    document.getElementById('menu-button').addEventListener('click', () => {
       navBarInner.classList.add('nav-bar-show');
     });
 
-    menuCloseButton.addEventListener('click', () => {
+    document.getElementById('menu-close-button').addEventListener('click', () => {
+      navBarInner.classList.remove('nav-bar-show');
+    });
+
+    document.getElementById('menu-button-features').addEventListener('click', () => {
+      navBarInner.classList.remove('nav-bar-show');
+    });
+
+    document.getElementById('menu-button-help').addEventListener('click', () => {
+      navBarInner.classList.remove('nav-bar-show');
+    });
+
+    document.getElementById('menu-button-download').addEventListener('click', () => {
+      navBarInner.classList.remove('nav-bar-show');
+    });
+
+    document.getElementById('menu-button-translate').addEventListener('click', () => {
       navBarInner.classList.remove('nav-bar-show');
     });
   </script>
