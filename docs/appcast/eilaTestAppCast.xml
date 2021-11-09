@@ -4,10 +4,22 @@
         <title>EILA - Appcast</title>
         <item>
             <title>Version 1.1.2</title>
-            <description>Test app cast, nothing really updated</description>
+            <!-- Description should contain the realse notes -->
+            <description>Put release notes here</description>
             <pubDate>Mon, 01 Nov 2021 12:00:00 +0000</pubDate>
-            <enclosure url="https://play.google.com/store/apps/details?id=com.burusho.eila" sparkle:version="1.1.2" sparkle:os="android" />
-			<!-- Use it to publish a critical update -->
+            <sparkle:version>1.1.2</sparkle:version>
+            <enclosure url="https://play.google.com/store/apps/details?id=com.burusho.eila" sparkle:os="android" />
+			<!-- Use criticalUpdate to publish a critical update -->
+            <!-- <sparkle:tags> <sparkle:criticalUpdate /> </sparkle:tags> -->
+        </item>
+        <item>
+            <title>Version 1.1.2</title>
+            <!-- Description should contain the realse notes -->
+            <description>Put release notes here</description>
+            <pubDate>Mon, 01 Nov 2021 12:00:00 +0000</pubDate>
+            <sparkle:version>1.1.2</sparkle:version>
+            <enclosure url="TODO change it" sparkle:os="iOS" />
+			<!-- Use criticalUpdate to publish a critical update -->
             <!-- <sparkle:tags> <sparkle:criticalUpdate /> </sparkle:tags> -->
         </item>
     </channel>
