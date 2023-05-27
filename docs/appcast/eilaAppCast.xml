@@ -3,21 +3,21 @@
     <channel>
         <title>EILA - Appcast</title>
         <item>
-            <title>Version 0.66.3</title>
+            <title>Version 0.66.4</title>
             <!-- Description should contain the realse notes -->
             <description>Put release notes here</description>
-            <pubDate>FRI, 5 May 2023 12:00:00 +0000</pubDate>
-            <sparkle:version>0.66.3</sparkle:version>
+            <pubDate>WED, 24 May 2023 12:00:00 +0000</pubDate>
+            <sparkle:version>0.66.4</sparkle:version>
             <enclosure url="https://play.google.com/store/apps/details?id=com.burusho.eila" sparkle:os="android" />
 			<!-- Use criticalUpdate to publish a critical update -->
             <!-- <sparkle:tags> <sparkle:criticalUpdate /> </sparkle:tags> -->
         </item>
         <item>
-            <title>Version 0.66.3</title>
+            <title>Version 0.66.4</title>
             <!-- Description should contain the realse notes -->
             <description>Put release notes here</description>
-            <pubDate>FRI, 5 May 2023 12:00:00 +0000</pubDate>
-            <sparkle:version>0.66.3</sparkle:version>
+            <pubDate>WED, 24 May 2023 12:00:00 +0000</pubDate>
+            <sparkle:version>0.66.4</sparkle:version>
             <enclosure url="TODO change it" sparkle:os="iOS" />
 			<!-- Use criticalUpdate to publish a critical update -->
             <!-- <sparkle:tags> <sparkle:criticalUpdate /> </sparkle:tags> -->
