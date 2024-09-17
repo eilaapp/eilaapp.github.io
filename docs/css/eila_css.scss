@@ -157,7 +157,42 @@ nav {
     margin-bottom: 2em;
   }
 
+  .app-store-icons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .app-store-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .app-store-icons a {
+    display: inline-block;
+  }
+
+  .android {
+    height: 70px;
+    width: auto;
+    max-width: 100%;
+  }
+
+  .apple {
+    // Adjust the height to account for vertical padding in Google Icon
+    height: calc(70px * (1 - 2 * 0.16));
+    width: auto;
+    max-width: 100%;
+    box-sizing: content-box;
+  }
+
   .footer-top {
+    padding: 1em 2em 0em 2em;
+  }
+
+  .footer-body {
     padding: 1em 2em 1em 2em;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
@@ -183,6 +218,21 @@ nav {
   .footer-bottom-content {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  .app-store-icons-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+  }
+
+  .app-store-icons {
+    width: auto;
+    justify-content: center;
   }
 }
 

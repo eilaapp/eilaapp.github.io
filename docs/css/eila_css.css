@@ -11,13 +11,11 @@
   --image-button-size: 1.5em;
   --main-content-width: 80%;
 }
-
 @media only screen and (max-width: 768px) {
   :root {
     --main-content-width: 100%;
   }
 }
-
 @media only screen and (min-width: 1410px) {
   :root {
     --main-content-width: 1128px;
@@ -53,8 +51,7 @@ section {
 .eila-header {
   position: fixed;
   width: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 1em 1em 1em 1em;
   top: 0;
   background: var(--primary-color);
@@ -85,19 +82,14 @@ nav {
   text-decoration: none;
   width: var(--logo-size);
 }
-
 .navbar .menu-button {
   width: var(--image-button-size);
   cursor: pointer;
 }
-
 .navbar .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   place-content: space-between;
 }
-
 .navbar .nav-bar-inner {
   color: var(--on-primary-color);
   background: var(--primary-color);
@@ -109,26 +101,21 @@ nav {
   height: 100vh;
   padding: 1em 0em 1em 1em;
 }
-
 .navbar .nav-bar-inner a {
   color: var(--on-primary-color);
 }
-
 .navbar .nav-bar-inner .menu-header {
   padding: 0em 1em 0em 1em;
 }
-
 .navbar .nav-bar-inner .menu-close-button {
   float: right;
   width: var(--image-button-size);
   cursor: pointer;
   padding-top: 1em;
 }
-
 .navbar .nav-bar-inner .primary-nav {
   margin-top: 2em;
 }
-
 .navbar .nav-bar-inner li {
   display: block;
   padding: 1em 1em 1em 4em;
@@ -142,7 +129,6 @@ nav {
   list-style-type: disc;
   padding-left: 1em;
 }
-
 .text-body-bulleted li {
   margin-bottom: 1em;
 }
@@ -153,47 +139,77 @@ nav {
   color: var(--on-primary-color);
   font-size: 0.8em;
 }
-
 .eila-footer a {
   color: var(--on-primary-color);
 }
-
 .eila-footer li {
   margin-bottom: 2em;
 }
-
-.eila-footer .footer-top {
-  padding: 1em 2em 1em 2em;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(10rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+.eila-footer .app-store-icons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
-
+.eila-footer .app-store-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.eila-footer .app-store-icons a {
+  display: inline-block;
+}
+.eila-footer .android {
+  height: 70px;
+  width: auto;
+  max-width: 100%;
+}
+.eila-footer .apple {
+  height: 47.6px;
+  width: auto;
+  max-width: 100%;
+  box-sizing: content-box;
+}
+.eila-footer .footer-top {
+  padding: 1em 2em 0em 2em;
+}
+.eila-footer .footer-body {
+  padding: 1em 2em 1em 2em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+}
 .eila-footer .bottom-section {
   margin-bottom: 1em;
 }
-
 .eila-footer .bottom-heading {
   font-size: 1.2em;
   font-weight: bold;
   text-transform: uppercase;
   color: var(--on-primary-dark);
 }
-
 .eila-footer .footer-bottom {
   padding: 1em 2em 1em 2em;
   color: var(--on-primary-dark);
   background: var(--primary-color-dark);
 }
-
 .eila-footer .footer-bottom-content {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(10rem, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
 }
 
+@media only screen and (max-width: 410px) {
+  .app-store-icons-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+  }
+  .app-store-icons {
+    width: auto;
+    justify-content: center;
+  }
+}
 @media only screen and (min-width: 768px) {
   .eila-header {
     position: fixed;
@@ -211,21 +227,13 @@ nav {
     display: none;
   }
   .navbar .container {
-    display: -ms-grid;
     display: grid;
-    -webkit-box-pack: unset;
-        -ms-flex-pack: unset;
-            justify-content: unset;
-    -ms-grid-columns: auto auto;
-        grid-template-columns: auto auto;
+    justify-content: unset;
+    grid-template-columns: auto auto;
   }
   .navbar .nav-bar-inner {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
     background: none;
     position: unset;
     height: auto;
@@ -233,8 +241,6 @@ nav {
     padding: 0;
   }
   .navbar .nav-bar-inner ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
   .navbar .nav-bar-inner li {
@@ -246,5 +252,4 @@ nav {
   .eila-footer .footer-bottom {
     padding: 1em 0em 1em 0em;
   }
-}
-/*# sourceMappingURL=eila_css.css.map */
+}/*# sourceMappingURL=eila_css.css.map */

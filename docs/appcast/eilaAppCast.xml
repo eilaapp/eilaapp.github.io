@@ -18,7 +18,7 @@
             <description>Put release notes here</description>
             <pubDate>Thu 22 Aug 2024 12:00:00 +0000</pubDate>
             <sparkle:version>0.77.4</sparkle:version>
-            <enclosure url="TODO change it" sparkle:os="iOS" />
+            <enclosure url="https://apps.apple.com/app/id6661270531" sparkle:os="iOS" />
 			<!-- Use criticalUpdate to publish a critical update -->
             <!-- <sparkle:tags> <sparkle:criticalUpdate /> </sparkle:tags> -->
         </item>
