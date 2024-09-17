@@ -197,7 +197,7 @@ nav {
   grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
 }
 
-@media only screen and (max-width: 410px) {
+@media only screen and (max-width: 480px) {
   .app-store-icons-container {
     flex-direction: column;
     justify-content: center;
