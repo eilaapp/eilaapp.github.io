@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currency Converter</title>
+  <!-- TODO change logo which is a placeholder SVG -->
+  <link rel="icon" type="image/x-icon" href="./images/converter_logo_transparent.svg" alt="Currency Converter">
+  <link href="./css/converter_css.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+  <header class="converter-header">
+    <div id="navbar" class="navbar main-content-area">
+      <div class="container">
+        <a class="logo" href="#">
+          <img id="logo-button" class="logo" src="./images/converter_logo_transparent.svg" alt="Home">
+        </a>
+
+        <img id="menu-button" class="menu-button" src="../images/menu.svg" alt="Menu">
+
+        <nav id="nav-bar-inner" class="nav-bar-inner">
+          <div class="menu-header">
+            <img id="logo-menu" class="logo-menu" src="./images/converter_logo_transparent.svg" alt="Home">
+            <img id="menu-close-button" class="menu-close-button" src="../images/close.svg" alt="Close">
+          </div>
+
+          <ul class="primary-nav">
+            <li><a href="#_Key_Features" id="menu-button-features">Features</a></li>
+            <li><a href="#_Download" id="menu-button-download">Download</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero main-content-area">
+    <div class="container">
+      <div class="main-body">
+        <h3 class="sub-title">Currency Converter</h3>
+        <p class="text-body">
+          Keep track of currency and crypto currency rates with our smart Currency Converter app! Effortlessly check
+          exchange rates between various currencies and cryptocurrencies, and enjoy a seamless offline experience.
+          Whether you are traveling, trading, or tracking currency trends, our Currency Converter app is your ultimate
+          companion for managing exchange rates anytime, anywhere.</p>
+        <br>
+        <h3 class="sub-title"><a name="_Key_Features"></a>Key Features</h3>
+        <ul class="text-body-bulleted">
+          <li><b>Currency & Cryptocurrency Support</b>: Get exchange rates for global currencies and popular
+            cryptocurrencies</li>
+          <li><b>Offline Support</b>: Access your saved rates and calculate conversions offline without internet, ideal
+            for international trips or limited connectivity</li>
+          <li><b>Manual Updates</b>: Take control of your rates. Update them manually whenever you need</li>
+          <li><b>Customizable Themes</b>: Personalize your app with various light and dark themes to suit your style
+          </li>
+          <li><b>No Signups Required</b>: Simply download and start using</li>
+          <li><b>Cloud Backups</b>: Optionally enable cloud backups to e.g. Google Drive to save your settings, ensuring
+            easy restoration during app reinstallations or phone changes</li>
+        </ul>
+        <br>
+        <p class="text-body">
+          <b>Exchange Rates:</b>
+          The exchange rates provided by the App are for informational purposes only and may not reflect
+          the latest rates available. While we strive to provide exchange rate data that is refreshed within the last 24
+          hours, fluctuations in currency values and delays in updates can result in discrepancies. Please verify rates
+          with your financial institution or preferred exchange service before making financial decisions or
+          transactions.
+          Use this app at your own discretion, and we are not liable for any discrepancies or financial losses incurred.
+        </p>
+
+        <p class="text-body">
+          <b>Note:</b> This app does not provide financial services, personal finance products, or banking services of
+          any
+          kind. Additionally, nothing within the app should be considered financial advice. All data is either manually
+          entered by you or imported from other apps or files.
+        </p>
+        <p class="text-body">
+          We prioritize your privacy:
+        </p>
+        <ul class="text-body-bulleted">
+          <li>Your data is stored locally on your device and never sent to our servers</li>
+          <li>If you enable optional cloud backup, your data is securely stored in your chosen backup service, such as
+            your Google Drive</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="converter-footer">
+    <div class="download-links app-store-icons-container">
+      <h3 class="sub-title"><a name="_Download"></a>COMING SOON...</h3>
+      <!-- TODO add app store links -->
+    </div>
+
+    <div class="social-icons">
+      <a name="_social-media"></a>
+      <a href="https://youtube.com/@eilaapp" target="_blank" aria-label="Visit our YouTube channel"><i
+          class="fab fa-youtube"></i></a>
+      <a href="https://instagram.com/eila.app" target="_blank" aria-label="Follow us on Instagram"><i
+          class="fab fa-instagram"></i></a>
+    </div>
+
+    <div class="footer-body main-content-area">
+      <ul class="bottom-section">
+        <p class="bottom-heading">Currency Converter</p>
+        <li><a href="#_Key_Features">Features</a></li>
+        <li><a href="./privacy.html">Privacy</a></li>
+        <li><a href="./privacy.html#_Terms_&_Conditions">Terms &amp; Conditions</a></li>
+      </ul>
+
+      <ul class="bottom-section">
+        <p class="bottom-heading">Support</p>
+        <li><a href="mailto:eila.support@burusho.com" id="button-contact-us">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="main-content-area">
+        <div class="footer-bottom-content">
+          <div>2024 &copy; Burusho Systems</div>
+          <div><a href="./privacy.html">Privacy &amp; Terms</a></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navBarInner = document.getElementById('nav-bar-inner');
+    document.getElementById('menu-button').addEventListener('click', () => {
+      navBarInner.classList.add('nav-bar-show');
+    });
+
+    document.getElementById('menu-close-button').addEventListener('click', () => {
+      navBarInner.classList.remove('nav-bar-show');
+    });
+
+    document.getElementById('menu-button-features').addEventListener('click', () => {
+      navBarInner.classList.remove('nav-bar-show');
+    });
+
+    document.getElementById('button-contact-us').addEventListener('click', () => {
+      navBarInner.classList.remove('nav-bar-show');
+    });
+
+    document.getElementById('menu-button-download').addEventListener('click', () => {
+      navBarInner.classList.remove('nav-bar-show');
+    });
+
+    document.getElementById('menu-button-translate').addEventListener('click', () => {
+      navBarInner.classList.remove('nav-bar-show');
+    });
+  </script>
+</body>
+
+</html>
