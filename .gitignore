@@ -1,2 +1,33 @@
-docs/desktop.ini
-docs/app_data/currency/currency_rates.enc
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+desktop.ini
+*/Rubbish/
+*.~vsdx
+*.~xlsx
+*.~docx
+*.~sql
+*.~pck
+*.~prc
+*.~fnc
+*.~pkb
+*.~pks
+
+# CSS related
+*.css.map
+.sass-cache/
+
+# IntelliJ related
+*.ipr
+*.iws
+.idea/
