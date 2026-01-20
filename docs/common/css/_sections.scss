@@ -1,7 +1,7 @@
 .section {
     padding: var(--spacing-xl);
     background: var(--surface-bright-color);
-    border-radius: var(--card-radius-lg);
+    border-radius: var(--card-radius-xl);
     margin-bottom: var(--spacing-lg);
     box-shadow: var(--shadow);
     border: none;
@@ -97,7 +97,7 @@
     }
 
     .section {
-        border-radius: var(--card-radius-md);
+        border-radius: var(--card-radius-lg);
     }
 
     .bs-hero-section h1 {

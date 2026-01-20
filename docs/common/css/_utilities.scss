@@ -15,21 +15,3 @@ html {
     margin-bottom: var(--spacing-md);
     line-height: 1.5;
 }
-
-/* Animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Apply animation to sections */
-.section,
-.bs-hero-section {
-    animation: fadeIn 0.3s ease-out;
-}

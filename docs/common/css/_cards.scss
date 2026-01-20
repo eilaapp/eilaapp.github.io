@@ -8,7 +8,7 @@
 .bs-card {
     background: var(--secondary-container-color);
     padding: var(--spacing-lg);
-    border-radius: var(--card-radius-lg);
+    border-radius: var(--card-radius-xl);
     box-shadow: var(--shadow-sm);
     border: none;
     text-decoration: none;
@@ -34,14 +34,14 @@
 
 .callout {
     background: var(--tertiary-container-color);
+    color: var(--on-tertiary-container-color);
     padding: var(--spacing-lg);
     margin: var(--spacing-md) 0 0;
-    border-radius: var(--card-radius-lg);
+    border-radius: var(--card-radius-xl);
     box-shadow: var(--shadow-sm);
     border: none;
 }
 
-.callout,
 .callout p,
 .callout strong,
 .callout li,
@@ -57,7 +57,7 @@
     @extend .section;
     background: var(--error-container-color);
     border-left: 4px solid var(--error-color);
-    border-radius: var(--card-radius-lg);
+    border-radius: var(--card-radius-xl);
     box-shadow: var(--shadow);
 }
 
@@ -84,11 +84,11 @@
 @media (max-width: 768px) {
     .callout {
         padding: var(--spacing-md);
-        margin: var(--spacing-nm) 0 0;
+        margin: var(--spacing-sm) 0 0;
     }
 
     .warning-card {
-        border-radius: var(--card-radius-md);
+        border-radius: var(--card-radius-lg);
     }
 }
 
@@ -101,7 +101,7 @@
 @media (max-width: 1024px) {
     .bs-card,
     .callout {
-        border-radius: var(--card-radius-md);
+        border-radius: var(--card-radius-lg);
     }
 }
 

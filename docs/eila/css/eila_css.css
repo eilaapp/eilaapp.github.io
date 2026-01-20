@@ -80,10 +80,12 @@
   --social-icon-color: var(--secondary-icon-color);
   --social-icon-hover-color: var(--primary-color);
   /* Radii */
-  --card-radius-lg: 24px;
-  --card-radius-md: 20px;
-  --card-radius-sm: 18px;
-  --card-radius-xxs: 12px;
+  --card-radius-xl: 24px;
+  --card-radius-lg: 20px;
+  --card-radius-md: 18px;
+  --card-radius-sm: 14px;
+  --card-radius-xs: 12px;
+  --card-radius-xxs: 8px;
   --button-radius: 34px;
   --circular-radius: 50%;
   /* Layout */
@@ -207,7 +209,7 @@ body {
   width: auto;
   height: 44px;
   padding: 0 12px;
-  border-radius: var(--card-radius-xxs);
+  border-radius: var(--card-radius-xs);
   background: transparent;
   color: var(--secondary-icon-color);
   border: 1px solid var(--surface-container-color);
@@ -282,12 +284,6 @@ body {
     width: 100%;
   }
 }
-/* Match the sidebar positioning by adjusting content margin on medium screens */
-@media (min-width: 1025px) and (max-width: 1200px) {
-  .bs-body-content {
-    margin-left: calc(var(--sidebar-width) + var(--spacing-lg));
-  }
-}
 .bs-footer {
   padding: 0;
   background: var(--surface-dim-color);
@@ -359,7 +355,7 @@ body {
   left: calc(50% - var(--max-width) / 2 + var(--spacing-md));
   width: var(--sidebar-width);
   background: var(--surface-bright-color);
-  border-radius: var(--card-radius-lg);
+  border-radius: var(--card-radius-xl);
   padding: var(--spacing-lg);
   box-shadow: var(--shadow);
   border: none;
@@ -452,8 +448,8 @@ body {
     border-radius: 0 !important;
     border-top-left-radius: 0 !important;
     border-bottom-left-radius: 0 !important;
-    border-top-right-radius: var(--card-radius-lg) !important;
-    border-bottom-right-radius: var(--card-radius-lg) !important;
+    border-top-right-radius: var(--card-radius-xl) !important;
+    border-bottom-right-radius: var(--card-radius-xl) !important;
     transform: translateX(-100%);
     padding: var(--spacing-lg);
     max-height: 100vh;
@@ -511,16 +507,16 @@ body {
 @media (max-width: 768px) {
   /* Non-rounded left corners on mobile sidebar */
   .bs-sidebar {
-    border-radius: var(--card-radius-md);
+    border-radius: var(--card-radius-lg);
     border-top-left-radius: 0 !important;
     border-bottom-left-radius: 0 !important;
-    border-top-right-radius: var(--card-radius-md) !important;
-    border-bottom-right-radius: var(--card-radius-md) !important;
+    border-top-right-radius: var(--card-radius-lg) !important;
+    border-bottom-right-radius: var(--card-radius-lg) !important;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   .bs-sidebar {
-    border-radius: var(--card-radius-md);
+    border-radius: var(--card-radius-lg);
   }
 }
 @media (min-width: 1025px) {
@@ -537,7 +533,7 @@ body {
 .section, .warning-card, .bs-hero-section {
   padding: var(--spacing-xl);
   background: var(--surface-bright-color);
-  border-radius: var(--card-radius-lg);
+  border-radius: var(--card-radius-xl);
   margin-bottom: var(--spacing-lg);
   box-shadow: var(--shadow);
   border: none;
@@ -632,7 +628,7 @@ body {
     margin: var(--spacing-nm) 0 0;
   }
   .section, .warning-card, .bs-hero-section {
-    border-radius: var(--card-radius-md);
+    border-radius: var(--card-radius-lg);
   }
   .bs-hero-section h1 {
     font-size: 1.875rem;
@@ -710,7 +706,7 @@ body {
 .bs-card, .bs-adaptive-grid-card {
   background: var(--secondary-container-color);
   padding: var(--spacing-lg);
-  border-radius: var(--card-radius-lg);
+  border-radius: var(--card-radius-xl);
   box-shadow: var(--shadow-sm);
   border: none;
   text-decoration: none;
@@ -738,14 +734,14 @@ body {
 
 .callout {
   background: var(--tertiary-container-color);
+  color: var(--on-tertiary-container-color);
   padding: var(--spacing-lg);
   margin: var(--spacing-md) 0 0;
-  border-radius: var(--card-radius-lg);
+  border-radius: var(--card-radius-xl);
   box-shadow: var(--shadow-sm);
   border: none;
 }
 
-.callout,
 .callout p,
 .callout strong,
 .callout li,
@@ -760,7 +756,7 @@ body {
 .warning-card {
   background: var(--error-container-color);
   border-left: 4px solid var(--error-color);
-  border-radius: var(--card-radius-lg);
+  border-radius: var(--card-radius-xl);
   box-shadow: var(--shadow);
 }
 
@@ -786,10 +782,10 @@ body {
 @media (max-width: 768px) {
   .callout {
     padding: var(--spacing-md);
-    margin: var(--spacing-nm) 0 0;
+    margin: var(--spacing-sm) 0 0;
   }
   .warning-card {
-    border-radius: var(--card-radius-md);
+    border-radius: var(--card-radius-lg);
   }
 }
 @media (min-width: 769px) {
@@ -800,7 +796,7 @@ body {
 @media (max-width: 1024px) {
   .bs-card, .bs-adaptive-grid-card,
   .callout {
-    border-radius: var(--card-radius-md);
+    border-radius: var(--card-radius-lg);
   }
 }
 /* Light-mode override */
@@ -814,7 +810,7 @@ body:not(.dark-mode) .bs-card, body:not(.dark-mode) .bs-adaptive-grid-card {
   align-items: center;
   margin: var(--spacing-lg) 0;
   overflow: hidden;
-  border-radius: var(--card-radius-lg);
+  border-radius: var(--card-radius-xl);
 }
 
 .bs-image-container-sm {
@@ -837,13 +833,19 @@ body:not(.dark-mode) .bs-card, body:not(.dark-mode) .bs-adaptive-grid-card {
 
 @media (min-width: 480px) {
   .bs-body-image {
-    max-height: 850px;
+    max-height: 800px;
   }
 }
 @media (max-width: 768px) {
   .bs-image-container,
   .bs-image-container-sm, .bs-image-container-last {
     margin: var(--spacing-md) 0;
+  }
+  .bs-image-container, .bs-image-container-sm, .bs-image-container-last {
+    border-radius: var(--card-radius-md);
+  }
+  .bs-image-container-sm {
+    border-radius: var(--card-radius-xxs);
   }
   .bs-image-container-last {
     margin: var(--spacing-md) 0 0;
@@ -960,7 +962,7 @@ body:not(.dark-mode) .bs-button {
 }
 @media (max-width: 1024px) {
   .bs-adaptive-grid-card {
-    border-radius: var(--card-radius-md);
+    border-radius: var(--card-radius-lg);
   }
 }
 @media (min-width: 1200px) {
@@ -989,23 +991,6 @@ html {
   color: var(--secondary-color);
   margin-bottom: var(--spacing-md);
   line-height: 1.5;
-}
-
-/* Animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-/* Apply animation to sections */
-.section,
-.bs-hero-section, .warning-card {
-  animation: fadeIn 0.3s ease-out;
 }
 
 /* Go to Top Button */
@@ -1075,7 +1060,7 @@ html {
 }
 
 .youtube-overview {
-  border-radius: var(--card-radius-md);
+  border-radius: var(--card-radius-lg);
 }
 
 .app-store-icons-container {

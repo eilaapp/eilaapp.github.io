@@ -39,10 +39,3 @@
         width: 100%;
     }
 }
-
-/* Match the sidebar positioning by adjusting content margin on medium screens */
-@media (min-width: 1025px) and (max-width: 1200px) {
-    .bs-body-content {
-        margin-left: calc(var(--sidebar-width) + var(--spacing-lg));
-    }
-}

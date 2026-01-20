@@ -4,7 +4,7 @@
     align-items: center;
     margin: var(--spacing-lg) 0;
     overflow: hidden;
-    border-radius: var(--card-radius-lg);
+    border-radius: var(--card-radius-xl);
 }
 
 .bs-image-container-sm {
@@ -29,7 +29,7 @@
 
 @media (min-width: 480px) {
     .bs-body-image {
-        max-height: 850px;
+        max-height: 800px;
     }
 }
 
@@ -37,6 +37,14 @@
     .bs-image-container,
     .bs-image-container-sm {
         margin: var(--spacing-md) 0;
+    }
+
+    .bs-image-container {
+        border-radius: var(--card-radius-md);
+    }
+
+    .bs-image-container-sm {
+        border-radius: var(--card-radius-xxs);
     }
 
     .bs-image-container-last {
