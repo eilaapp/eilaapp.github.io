@@ -1,0 +1,48 @@
+/* Main Layout wrapper & content */
+.bs-body-layout {
+    display: flex;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--spacing-lg) var(--spacing-md) var(--spacing-xl);
+    gap: var(--spacing-xl);
+    position: relative;
+    min-height: calc(100vh - var(--header-height));
+}
+
+/* Add margin-left to body to account for sidebar width + spacing */
+.bs-body-content {
+    flex: 1;
+    margin-left: calc(var(--sidebar-width) + var(--spacing-xl));
+    min-width: 0;
+    transform: translateZ(0);
+}
+
+@media (max-width: 768px) {
+    .bs-body-layout {
+        padding: var(--spacing-sm) var(--spacing-sm) var(--spacing-lg);
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .bs-body-layout {
+        padding: var(--spacing-lg) var(--spacing-md) var(--spacing-xl);
+    }
+}
+
+@media (max-width: 1024px) {
+    .bs-body-layout {
+        flex-direction: column;
+    }
+
+    .bs-body-content {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+/* Match the sidebar positioning by adjusting content margin on medium screens */
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .bs-body-content {
+        margin-left: calc(var(--sidebar-width) + var(--spacing-lg));
+    }
+}

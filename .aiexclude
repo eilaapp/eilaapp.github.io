@@ -1,0 +1,180 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+desktop.ini
+*/Rubbish/
+*.~vsdx
+*.~xlsx
+*.~docx
+*.~sql
+*.~pck
+*.~prc
+*.~fnc
+*.~pkb
+*.~pks
+
+# IntelliJ related
+#*.iml
+*.ipr
+*.iws
+.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# JDeveloper related
+.data/
+.adf
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+/build/
+
+# Web related
+lib/generated_plugin_registrant.dart
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# Ignore sensitive files
+/android/key.properties
+
+# Exceptions to above rules.
+!/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
+!/.idea/
+
+# Mac
+.DS_Store
+
+coverage/lcov.info
+.idea/workspace.xml
+.idea/libraries/Dart_Packages.xml
+.idea/libraries/Flutter_Plugins.xml
+.crashlytics/
+.idea/other.xml
+.idea/studiobot.xml
+.idea/caches/deviceStreaming.xml
+.idea/runConfigurations.xml
+
+# =========================
+# Flutter / Dart specific
+# =========================
+
+# Generated files
+build/
+coverage/
+coverage.*
+*.lcov
+
+# Lock files (may contain dependency tree with versions, not always needed)
+pubspec.lock
+
+# =========================
+# Android specific
+# =========================
+
+# Gradle
+.gradle/
+**/build/
+gradlew
+gradlew.bat
+gradle-wrapper.jar
+gradle-wrapper.properties
+
+# Android Studio
+*.iml
+
+# =========================
+# iOS specific
+# =========================
+
+# Xcode
+ios/Pods/
+ios/Podfile.lock
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Runner.xcworkspace/
+ios/.symlinks/
+ios/DerivedData/
+ios/Runner.xcodeproj/project.xcworkspace/
+xcuserdata/
+
+# =========================
+# General OS / Editor
+# =========================
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# VS Code / JetBrains IDE
+.vscode/
+
+# Temp, logs, caches
+*.tmp
+*.swo
+.cache/
+tmp/
+temp/
+
+# =========================
+# Sensitive files
+# =========================
+
+# Keys and credentials
+*.key
+*.pem
+*.crt
+*.pfx
+*.p12
+*.der
+**/credentials.json
+**/secrets.json
+**/.env
+**/.env.*
+
+# Firebase / Google Services (keep these out of AI context)
+google-services.json
+GoogleService-Info.plist
+
+# =========================
+# Exceptions (allowlist)
+# =========================
+!README.md
+!pubspec.yaml
+
+# Sensitive
+crypto*
+!crypto*/
+**/*config.*
+**/*config
+local.properties
+**/local.properties
+*.keystore
+*.jks

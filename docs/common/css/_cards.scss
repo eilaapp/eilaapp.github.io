@@ -1,0 +1,111 @@
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    margin: var(--spacing-lg) 0;
+}
+
+.bs-card {
+    background: var(--secondary-container-color);
+    padding: var(--spacing-lg);
+    border-radius: var(--card-radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: none;
+    text-decoration: none;
+    display: block;
+}
+
+.bs-card,
+.bs-card p {
+    color: var(--on-secondary-container-color);
+}
+
+.bs-card h3,
+.bs-card h4 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-xxs);
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.bs-card h4 {
+    margin-bottom: var(--spacing-sm);
+}
+
+.callout {
+    background: var(--tertiary-container-color);
+    padding: var(--spacing-lg);
+    margin: var(--spacing-md) 0 0;
+    border-radius: var(--card-radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: none;
+}
+
+.callout,
+.callout p,
+.callout strong,
+.callout li,
+.callout i,
+.callout h2,
+.callout h3,
+.callout h4 {
+    margin: 0;
+    color: var(--on-tertiary-container-color);
+}
+
+.warning-card {
+    @extend .section;
+    background: var(--error-container-color);
+    border-left: 4px solid var(--error-color);
+    border-radius: var(--card-radius-lg);
+    box-shadow: var(--shadow);
+}
+
+.warning-card p,
+.warning-card strong,
+.warning-card li,
+.warning-card i,
+.warning-card h2,
+.warning-card h3,
+.warning-card h4 {
+    color: var(--on-error-container-color);
+}
+
+.warning-card h2 {
+    border-bottom: 1px solid var(--on-error-container-color);
+}
+
+@media (max-width: 600px) {
+    .bs-card {
+        padding: var(--spacing-md);
+    }
+}
+
+@media (max-width: 768px) {
+    .callout {
+        padding: var(--spacing-md);
+        margin: var(--spacing-nm) 0 0;
+    }
+
+    .warning-card {
+        border-radius: var(--card-radius-md);
+    }
+}
+
+@media (min-width: 769px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .bs-card,
+    .callout {
+        border-radius: var(--card-radius-md);
+    }
+}
+
+/* Light-mode override */
+body:not(.dark-mode) .bs-card {
+    background: var(--primary-container-color);
+}

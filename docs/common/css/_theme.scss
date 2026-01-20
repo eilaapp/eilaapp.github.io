@@ -1,0 +1,90 @@
+// Make sure to import this only after the file where colors are defined
+:root {
+    /* Current Theme */
+    --primary-color: var(--primary-color-light);
+    --on-primary-color: var(--on-primary-color-light);
+    --primary-container-color: var(--primary-container-color-light);
+    --on-primary-container-color: var(--on-primary-container-color-light);
+    --secondary-color: var(--secondary-color-light);
+    --on-secondary-color: var(--on-secondary-color-light);
+    --secondary-container-color: var(--secondary-container-color-light);
+    --on-secondary-container-color: var(--on-secondary-container-color-light);
+    --tertiary-color: var(--tertiary-color-light);
+    --on-tertiary-color: var(--on-tertiary-color-light);
+    --tertiary-container-color: var(--tertiary-container-color-light);
+    --on-tertiary-container-color: var(--on-tertiary-container-color-light);
+    --surface-color: var(--surface-color-light);
+    --surface-dim-color: var(--surface-dim-color-light);
+    --surface-bright-color: var(--surface-bright-color-light);
+    --surface-container-color: var(--surface-container-color-light);
+    --surface-container-high-color: var(--surface-container-high-color-light);
+    --on-surface-color: var(--on-surface-color-light);
+    --outline-color: var(--outline-color-light);
+    --outline-variant-color: var(--outline-variant-color-light);
+    --error-color: var(--error-color-light);
+    --error-container-color: var(--error-container-color-light);
+    --on-error-container-color: var(--on-error-container-color-light);
+
+    --secondary-icon-color: var(--secondary-icon-color-light);
+    --social-icon-color: var(--secondary-icon-color);
+    --social-icon-hover-color: var(--primary-color);
+
+    /* Radii */
+    --card-radius-lg: 24px;
+    --card-radius-md: 20px;
+    --card-radius-sm: 18px;
+    --card-radius-xxs: 12px;
+    --button-radius: 34px;
+    --circular-radius: 50%;
+
+    /* Layout */
+    --max-width: 1200px;
+    --sidebar-width: 260px;
+    --header-height: 80px;
+    --spacing-xxs: 0.5rem;
+    --spacing-xs: 0.75rem;
+    --spacing-sm: 1rem;
+    --spacing-nm: 1.25rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --list-icon-size: 1.125rem;
+    --list-icon-size-xs: 0.875rem;
+    --social-icon-size: 3em;
+
+    --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.dark-mode {
+    --primary-color: var(--primary-color-dark);
+    --on-primary-color: var(--on-primary-color-dark);
+    --primary-container-color: var(--primary-container-color-dark);
+    --on-primary-container-color: var(--on-primary-container-color-dark);
+    --secondary-color: var(--secondary-color-dark);
+    --on-secondary-color: var(--on-secondary-color-dark);
+    --secondary-container-color: var(--secondary-container-color-dark);
+    --on-secondary-container-color: var(--on-secondary-container-color-dark);
+    --tertiary-color: var(--tertiary-color-dark);
+    --on-tertiary-color: var(--on-tertiary-color-dark);
+    --tertiary-container-color: var(--tertiary-container-color-dark);
+    --on-tertiary-container-color: var(--on-tertiary-container-color-dark);
+    --surface-color: var(--surface-color-dark);
+    --surface-dim-color: var(--surface-dim-color-dark);
+    --surface-bright-color: var(--surface-bright-color-dark);
+    --surface-container-color: var(--surface-container-color-dark);
+    --surface-container-high-color: var(--surface-container-high-color-dark);
+    --on-surface-color: var(--on-surface-color-dark);
+    --outline-color: var(--outline-color-dark);
+    --outline-variant-color: var(--outline-variant-color-dark);
+    --error-color: var(--error-color-dark);
+    --error-container-color: var(--error-container-color-dark);
+    --on-error-container-color: var(--on-error-container-color-dark);
+
+    --secondary-icon-color: var(--secondary-icon-color-dark);
+    --social-icon-color: var(--secondary-icon-color);
+    --social-icon-hover-color: var(--primary-color);
+}

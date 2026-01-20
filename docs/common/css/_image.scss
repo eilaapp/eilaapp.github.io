@@ -1,0 +1,45 @@
+.bs-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: var(--spacing-lg) 0;
+    overflow: hidden;
+    border-radius: var(--card-radius-lg);
+}
+
+.bs-image-container-sm {
+    @extend .bs-image-container;
+    border-radius: var(--card-radius-sm);
+}
+
+/* To be used as the last item in a section to not add bottom margin */
+.bs-image-container-last {
+    @extend .bs-image-container;
+    margin: var(--spacing-lg) 0 0;
+}
+
+.bs-body-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: inherit;
+    -o-object-fit: contain;
+    object-fit: contain;
+    display: block;
+}
+
+@media (min-width: 480px) {
+    .bs-body-image {
+        max-height: 850px;
+    }
+}
+
+@media (max-width: 768px) {
+    .bs-image-container,
+    .bs-image-container-sm {
+        margin: var(--spacing-md) 0;
+    }
+
+    .bs-image-container-last {
+        margin: var(--spacing-md) 0 0;
+    }
+}

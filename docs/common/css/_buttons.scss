@@ -1,0 +1,78 @@
+.button-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    margin: var(--spacing-md) 0;
+}
+
+/* To be used as the last item in a section to not add bottom margin */
+.button-grid-last {
+    @extend .button-grid;
+    margin: var(--spacing-md) 0 0;
+}
+
+.bs-button {
+    border: none;
+    text-decoration: none;
+    display: block;
+    font-weight: 600;
+    text-align: center;
+    background: var(--secondary-container-color);
+    color: var(--on-secondary-container-color);
+    border-radius: var(--button-radius);
+    box-shadow: var(--shadow-sm);
+    padding: var(--spacing-nm);
+    cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.bs-button h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-xxs);
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.bs-button h4 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.bs-button:hover {
+    box-shadow: var(--shadow);
+    transform: translateY(-2px);
+}
+
+.bs-button:active {
+    transform: translateY(0);
+}
+
+@media (min-width: 601px) {
+    .button-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .button-grid {
+        gap: var(--spacing-sm);
+        margin: var(--spacing-sm) 0;
+    }
+
+    .button-grid-last {
+        margin: var(--spacing-sm) 0 0;
+    }
+
+    .bs-button {
+        padding: var(--spacing-sm);
+    }
+}
+
+/* Light-mode override */
+body:not(.dark-mode) .bs-button {
+    background: var(--primary-container-color);
+}

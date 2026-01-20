@@ -1,0 +1,62 @@
+/* Simple list without borders */
+.bs-list {
+    list-style: none;
+    padding: 0;
+    margin: var(--spacing-lg) 0;
+}
+
+.bs-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.bs-list li:last-child {
+    margin-bottom: 0;
+}
+
+.bs-list i {
+    color: var(--primary-color);
+    font-size: var(--list-icon-size-xs);
+    flex-shrink: 0;
+    margin-top: 5px;
+}
+
+/* Lists with Icons */
+.icon-list {
+    list-style: none;
+    padding: 0;
+    margin: var(--spacing-lg) 0;
+}
+
+.icon-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--outline-variant-color);
+}
+
+.icon-list li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.icon-list i {
+    color: var(--primary-color);
+    font-size: var(--list-icon-size);
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+@media (max-width: 768px) {
+    .icon-list li {
+        margin-bottom: var(--spacing-sm);
+        padding-bottom: var(--spacing-sm);
+    }
+}

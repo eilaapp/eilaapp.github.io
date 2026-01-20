@@ -1,0 +1,55 @@
+:root {
+    /* Light Mode colors*/
+    --primary-color-light: #315da8;
+    --on-primary-color-light: #ffffff;
+    --primary-container-color-light: #d8e2ff;
+    --on-primary-container-color-light: #001a41;
+    --secondary-color-light: #555f71;
+    --on-secondary-color-light: #ffffff;
+    --secondary-container-color-light: #d8e3f8;
+    --on-secondary-container-color-light: #111c2b;
+    --tertiary-color-light: #3f6375;
+    --on-tertiary-color-light: #ffffff;
+    --tertiary-container-color-light: #c2e8fd;
+    --on-tertiary-container-color-light: #001e2b;
+    --surface-color-light: #f1f1f9;
+    --surface-dim-color-light: #d9d9e0;
+    --surface-bright-color-light: #ffffff;
+    --surface-container-color-light: #ededf4;
+    --surface-container-high-color-light: #e8e7ee;
+    --on-surface-color-light: #1b1b1f;
+    --outline-color-light: #75777f;
+    --outline-variant-color-light: #c4c6d0;
+    --error-color-light: #ba1a1a;
+    --error-container-color-light: #ffdad6;
+    --on-error-container-color-light: #410002;
+    --secondary-icon-color-light: #344955;
+
+    /* Dark Mode colors*/
+    --primary-color-dark: #bdc4f6;
+    --on-primary-color-dark: #262d56;
+    --primary-container-color-dark: #3d446e;
+    --on-primary-container-color-dark: #dee0ff;
+    --secondary-color-dark: #c4c5d9;
+    --on-secondary-color-dark: #2d2f3f;
+    --secondary-container-color-dark: #444656;
+    --on-secondary-container-color-dark: #e0e1f6;
+    --tertiary-color-dark: #e0bcd4;
+    --on-tertiary-color-dark: #41283b;
+    --tertiary-container-color-dark: #593e52;
+    --on-tertiary-container-color-dark: #fed8f1;
+    --surface-color-dark: #27282f;
+    --surface-dim-color-dark: #2f3036;
+    --surface-bright-color-dark: #2e2e38;
+    --surface-container-color-dark: #39393f;
+    --surface-container-high-color-dark: #47464c;
+    --on-surface-color-dark: #e4e1e6;
+    --outline-color-dark: #90909a;
+    --outline-variant-color-dark: #46464f;
+    --error-color-dark: #ffb4ab;
+    --error-container-color-dark: #ab342b;
+    --on-error-container-color-dark: #f2b8b5;
+    --secondary-icon-color-dark: #adadb1;
+}
+
+@import "../../common/css/theme";

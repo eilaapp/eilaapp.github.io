@@ -11,42 +11,56 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
 </head>
 
-<body>
-  <header class="eila-header">
-    <div id="navbar" class="navbar main-content-area">
-      <div class="container">
-        <a class="logo" href="#">
-          <img id="logo-button" class="logo" src="./eila/images/logo_transparent.svg" alt="Home">
+<body class="light-mode">
+  <header class="main-header">
+    <div class="header-content">
+      <div class="header-row">
+        <button class="bs-mobile-sidebar-toggle" id="mobile-sidebar-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="logo-container">
+          <a href="#">
+            <img class="logo" src="./eila/images/logo_transparent.svg" alt="Home">
+          </a>
+        </div>
+      </div>
+
+      <div class="header-row">
+        <a href="#download" class="header-action-button">
+          <i class="fas fa-download"></i> Download
         </a>
 
-        <img id="menu-button" class="menu-button" src="./images/menu.svg" alt="Menu">
-
-        <nav id="nav-bar-inner" class="nav-bar-inner">
-          <div class="menu-header">
-            <img id="logo-menu" class="logo-menu" src="./images/logo_transparent.svg" alt="Home">
-            <img id="menu-close-button" class="menu-close-button" src="./images/close.svg" alt="Close">
-          </div>
-
-          <ul class="primary-nav">
-            <li><a href="#_Key_Features" id="menu-button-features">Features</a></li>
-            <li><a href="#_Download" id="menu-button-download">Download</a></li>
-            <li><a href="mailto:eila.support@burusho.com" id="menu-button-translate">Help Translate</a></li>
-          </ul>
-        </nav>
+        <button class="header-action-button" id="theme-toggle">
+          <i class="fas fa-moon"></i>
+        </button>
       </div>
     </div>
   </header>
 
-  <section class="hero main-content-area">
-    <div class="container">
-      <div class="main-body">
-        <h3 class="sub-title">EILA Money Manager, Expense Tracker & Budget, manage money like a Pro.</h3>
-        <p class="text-body">
-          EILA is a smart and simple finance manager to keep track of Expenses, Income, Liabilities, and Assets. With
-          just a few clicks and taps you add an expense, income, liability, or an asset and let EILA take care of the
-          rest, be it showing in various groupings, creating graphs/charts, or generating reports. With EILA you know
-          where the money goes, what are your savings and assets, what do you owe others, means you are in full control
-          of your finances, based on which you can plan for the future savings and retirement goals.</p>
+  <!-- Sidebar Overlay for Mobile -->
+  <div class="bs-sidebar-overlay" id="sidebar-overlay"></div>
+
+  <div class="bs-body-layout">
+    <aside class="bs-sidebar" id="sidebar-id">
+      <nav class="bs-sidebar-nav">
+        <a href="#overview"><i class="fas fa-home"></i>Overview</a>
+        <a href="#features"><i class="fas fa-star"></i>Features</a>
+        <a href="#download"><i class=" fas fa-download"></i>Download</a>
+        <a href="mailto:eila.support@burusho.com"><i class="fas fa-language"></i>Help Translate</a>
+      </nav>
+    </aside>
+
+    <main class="bs-body-content">
+      <section class="bs-hero-section" id="overview">
+        <h1>EILA Money Manager</h1>
+        <p class="body-text-large">Expense Tracker and Budgets, Manage money like a Pro.</p>
+        <p>EILA is a smart and simple finance manager to keep track of Expenses, Income, Liabilities, Assets and
+          Budgets.
+        </p>
+        <p>With just a few clicks and taps you add an expense, income, liability, or an asset and let EILA take care of
+          the rest, be it showing in various groupings, creating graphs/charts, or generating reports. With EILA you
+          know where the money goes, what are your savings and assets, what do you owe others, means you are in full
+          control of your finances, based on which you can plan for the future savings and retirement goals.</p>
 
         <div class="youtube-overview-container">
           <iframe class="youtube-overview" width="282" height="500"
@@ -55,108 +69,115 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
-        <br>
-        <h3 class="sub-title"><a name="_Key_Features"></a>Key Features</h3>
-        <ul class="text-body-bulleted">
-          <li>No account or signups needed, just download the app and start using it</li>
-          <li>Manage finances in 4 main categories Expenses, Income, Liabilities, and Assets. Each main category has
-            sub-categories e.g. Groceries, Salary, Health, House etc.</li>
-          <li>Periodic and rollover Budgets, including forecasting</li>
-          <li>Recurring Transactions</li>
-          <li>Loans and Loan Payments</li>
-          <li>Assets and Asset Sales</li>
-          <li>Currency converter</li>
-          <li>Organize transactions into accounts e.g. Bank Account, Cash, Credit Card, Debit Card, Prepaid Card etc
+      </section>
+
+      <section class="section" name="features" id="features">
+        <h2>Key Features</h2>
+        <ul class="icon-list">
+          <li><i class="fas fa-download"></i> No account or signups needed, just download the app and start using it
           </li>
-          <li>Password & Biometric Lock</li>
-          <li>Filter and display transactions by category and sub-category</li>
-          <li>Custom Transaction Categories</li>
-          <li>Hidden categories, for privacy</li>
-          <li>Hide amounts, for privacy</li>
-          <li>Beautiful graphs/charts</li>
-          <li>Enter transactions in almost any currency</li>
-          <li>Auto conversion from one currency transaction to the main currency. Note: internet access is needed to
-            download currency rates</li>
-          <li>Transfer between accounts</li>
-          <li>Manual and Auto Backups, so you don’t lose data if the phone is damaged, lost or changed.
-            Note, only if backups are enabled and backup was run on the device</li>
-          <li>Import/Migrate data from other similar Apps e.g. Monefy, Spendee, etc. Note, import is an experimental
-            feature it might not be 100% accurate, it also depends on the files generated by EILA and other Apps</li>
-          <li>Export to CSV</li>
-          <li>Give it a personal touch by changing graphic colors</li>
-          <li>Dark and Light mode</li>
-          <li>You are in control of your data, the data is only saved on your device, it doesn’t reach our servers.
-            Note, when you enable backups the backup is stored in your cloud service provider in your own account e.g.
-            Google Drive</li>
-          <li>Simple to use</li>
-          <li>Your Local Language support. Help us translate in your language</li>
-          <li>Your suggestions are most welcome</li>
+          <li><i class="fas fa-layer-group"></i> Manage finances in 4 main categories Expenses, Income, Liabilities, and
+            Assets. Each main category has sub-categories e.g. Groceries, Salary, Health, House etc.</li>
+          <li><i class="fas fa-chart-line"></i> Periodic and rollover Budgets, including forecasting</li>
+          <li><i class="fas fa-repeat"></i> Recurring Transactions</li>
+          <li><i class="fas fa-hand-holding-dollar"></i> Loans and Loan Payments</li>
+          <li><i class="fas fa-building-columns"></i> Assets and Asset Sales</li>
+          <li><i class="fas fa-arrow-right-arrow-left"></i> Currency converter</li>
+          <li><i class="fas fa-wallet"></i> Organize transactions into accounts e.g. Bank Account, Cash, Credit Card,
+            Debit Card, Prepaid Card etc</li>
+          <li><i class="fas fa-lock"></i> Password & Biometric Lock</li>
+          <li><i class="fas fa-filter"></i> Filter and display transactions by category and sub-category</li>
+          <li><i class="fas fa-tags"></i> Custom Transaction Categories</li>
+          <li><i class="fas fa-eye-slash"></i> Hidden categories, for privacy</li>
+          <li><i class="fas fa-mask"></i> Hide amounts, for privacy</li>
+          <li><i class="fas fa-chart-pie"></i> Beautiful graphs/charts</li>
+          <li><i class="fas fa-coins"></i> Enter transactions in almost any currency</li>
+          <li><i class="fas fa-arrows-rotate"></i> Auto conversion from one currency transaction to the main currency.
+            Note: internet access is needed to download currency rates</li>
+          <li><i class="fas fa-right-left"></i> Transfer between accounts</li>
+          <li><i class="fas fa-cloud-arrow-up"></i> Manual and Auto Backups, so you don’t lose data if the phone is
+            damaged, lost or changed. Note, only if backups are enabled and backup was run on the device</li>
+          <li><i class="fas fa-file-import"></i> Import/Migrate data from other similar Apps e.g. Monefy, Spendee, etc.
+            Note, import is an experimental feature it might not be 100% accurate, it also depends on the files
+            generated by EILA and other Apps</li>
+          <li><i class="fas fa-file-csv"></i> Export to CSV</li>
+          <li><i class="fas fa-palette"></i> Give it a personal touch by changing graphic colors</li>
+          <li><i class="fas fa-circle-half-stroke"></i> Dark and Light mode</li>
+          <li><i class="fas fa-user-shield"></i> You are in control of your data, the data is only saved on your device,
+            it doesn’t reach our servers. Note, when you enable backups the backup is stored in your cloud service
+            provider in your own account e.g. Google Drive</li>
+          <li><i class="fas fa-wand-magic-sparkles"></i> Simple to use</li>
+          <li><i class="fas fa-language"></i> Your Local Language support. You can help us translate in your language
+          </li>
+          <li><i class="fas fa-message"></i> Your suggestions are most welcome</li>
         </ul>
+      </section>
+
+      <section class="warning-card" id="disclaimer">
+        <h2>Disclaimer</h2>
+        <p>This app does not provide financial services, personal finance products, or banking services of any kind.
+          Additionally, nothing within the app should be considered financial advice. All data is either manually
+          entered by you or imported from other apps or files.</p>
         <br>
-        <p class="text-body">
-          <b>Note:</b> This app does not provide financial services, personal finance products, or banking services of any
-          kind. Additionally, nothing within the app should be considered financial advice. All data is either manually
-          entered by you or imported from other apps or files.
-        </p>
-        <p class="text-body">
-          We prioritize your privacy:
-        </p>
-        <ul class="text-body-bulleted">
-          <li>Your data is stored locally on your device and never sent to our servers</li>
-          <li>If you enable optional cloud backup, your data is securely stored in your chosen backup service, such as
-            your Google Drive</li>
+        <p>We prioritize your privacy:</p>
+        <ul class="bs-list">
+          <li><i class="fas fa-circle"></i>Your data is stored locally on your device and never sent to our servers</li>
+          <li><i class="fas fa-circle"></i>If you enable optional cloud backup, your data is securely stored in your
+            chosen backup service, such as your Google Drive</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <footer class="bs-footer">
+    <div class="footer-container">
+      <div class="download-links app-store-icons-container">
+        <a name="download" id="download"></a>
+        <div class="app-store-icons">
+          <a href="https://play.google.com/store/apps/details?id=com.burusho.eila">
+            <img src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'
+              alt='Get it on Google Play' class="get-on-android" />
+          </a>
+        </div>
+
+        <div class="app-store-icons">
+          <a
+            href="https://apps.apple.com/us/app/eila-money-manager-budget/id6661270531?itscg=30200&itsct=apps_box_badge&mttnsubad=6661270531">
+            <img
+              src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1726531200"
+              alt="Download on the App Store" class="get-on-apple" />
+          </a>
+        </div>
+      </div>
+
+      <div class="social-icons">
+        <a name="_social-media"></a>
+        <a href="https://youtube.com/@eilaapp" target="_blank" aria-label="Visit our YouTube channel"><i
+            class="fab fa-youtube"></i></a>
+        <a href="https://instagram.com/eila.app" target="_blank" aria-label="Follow us on Instagram"><i
+            class="fab fa-instagram"></i></a>
+        <a href="https://tiktok.com/@eila.app" target="_blank" aria-label="Visit our TikTok channel"><i
+            class="fab fa-tiktok"></i></a>
+      </div>
+
+      <div class="footer-grid">
+        <ul class="footer-list">
+          <p class="footer-heading">EILA</p>
+          <li><a href="#features">Features</a></li>
+          <li><a href="./privacy.html">Privacy</a></li>
+          <li><a href="./privacy.html#_Terms_&_Conditions">Terms &amp; Conditions</a></li>
+        </ul>
+
+        <ul class="footer-list">
+          <p class="footer-heading">Support</p>
+          <li><a href="mailto:eila.support@burusho.com" id="button-contact-us">Contact</a></li>
         </ul>
       </div>
-    </div>
-  </section>
-
-  <footer class="eila-footer">
-    <div class="download-links app-store-icons-container">
-      <a name="_Download"></a>
-      <div class="app-store-icons">
-        <a href="https://play.google.com/store/apps/details?id=com.burusho.eila">
-          <img src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'
-            alt='Get it on Google Play' class="android" />
-        </a>
-      </div>
-
-      <div class="app-store-icons">
-        <a
-          href="https://apps.apple.com/us/app/eila-money-manager-budget/id6661270531?itscg=30200&itsct=apps_box_badge&mttnsubad=6661270531">
-          <img
-            src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1726531200"
-            alt="Download on the App Store" class="apple" />
-        </a>
-      </div>
-    </div>
-
-    <div class="social-icons">
-      <a name="_social-media"></a>
-      <a href="https://youtube.com/@eilaapp" target="_blank" aria-label="Visit our YouTube channel"><i
-          class="fab fa-youtube"></i></a>
-      <a href="https://instagram.com/eila.app" target="_blank" aria-label="Follow us on Instagram"><i
-          class="fab fa-instagram"></i></a>
-      <a href="https://tiktok.com/@eila.app" target="_blank" aria-label="Visit our TikTok channel"><i
-        class="fab fa-tiktok"></i></a>
-    </div>
-
-    <div class="footer-body main-content-area">
-      <ul class="bottom-section">
-        <p class="bottom-heading">EILA</p>
-        <li><a href="#_Key_Features">Features</a></li>
-        <li><a href="./privacy.html">Privacy</a></li>
-        <li><a href="./privacy.html#_Terms_&_Conditions">Terms &amp; Conditions</a></li>
-      </ul>
-
-      <ul class="bottom-section">
-        <p class="bottom-heading">Support</p>
-        <li><a href="mailto:eila.support@burusho.com" id="button-contact-us">Contact</a></li>
-      </ul>
     </div>
 
     <div class="footer-bottom">
-      <div class="main-content-area">
-        <div class="footer-bottom-content">
+      <div class="footer-container">
+        <div class="footer-bottom-grid">
           <div>2026 &copy; Burusho Systems</div>
           <div><a href="./privacy.html">Privacy &amp; Terms</a></div>
         </div>
@@ -164,30 +185,34 @@
     </div>
   </footer>
 
+  <button class="go-to-top-button" id="go-to-top-button"><i class="fas fa-chevron-up"></i></button>
+  <script src="./common/js/bs_ui_commons.js"></script>
+
   <script>
-    const navBarInner = document.getElementById('nav-bar-inner');
-    document.getElementById('menu-button').addEventListener('click', () => {
-      navBarInner.classList.add('nav-bar-show');
-    });
-
-    document.getElementById('menu-close-button').addEventListener('click', () => {
-      navBarInner.classList.remove('nav-bar-show');
-    });
-
-    document.getElementById('menu-button-features').addEventListener('click', () => {
-      navBarInner.classList.remove('nav-bar-show');
-    });
-
-    document.getElementById('button-contact-us').addEventListener('click', () => {
-      navBarInner.classList.remove('nav-bar-show');
-    });
-
-    document.getElementById('menu-button-download').addEventListener('click', () => {
-      navBarInner.classList.remove('nav-bar-show');
-    });
-
-    document.getElementById('menu-button-translate').addEventListener('click', () => {
-      navBarInner.classList.remove('nav-bar-show');
+    initUIBehaviors({
+      theme: {
+        toggleSelector: '#theme-toggle',
+        rootSelector: 'body',
+        darkClass: 'dark-mode',
+        storageKey: 'theme',
+        followSystem: true,
+        iconOnDark: 'fas fa-sun',
+        iconOnLight: 'fas fa-moon'
+      },
+      sidebar: {
+        toggleSelector: '#mobile-sidebar-toggle',
+        sidebarSelector: '#sidebar-id',
+        overlaySelector: '#sidebar-overlay',
+        linkSelector: '.bs-sidebar-nav a',
+        activeClass: 'active',
+        lockScroll: true,
+        desktopBreakpoint: 1024
+      },
+      goToTop: {
+        selector: '#go-to-top-button',
+        visibleClass: 'visible',
+        threshold: 300
+      }
     });
   </script>
 </body>

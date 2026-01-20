@@ -6,15 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EILA Retirement Planner</title>
   <link rel="icon" type="image/x-icon" href="../images/logo_transparent.svg" alt="EILA">
-  <link href="../css/tutorial_css.css" rel="stylesheet" type="text/css">
+  <link href="../css/eila_css.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
 </head>
 
 <body class="light-mode">
   <header class="main-header">
     <div class="header-content">
-      <div class="header-left">
-        <button class="mobile-sidebar-toggle" id="mobile-sidebar-toggle">
+      <div class="header-row">
+        <button class="bs-mobile-sidebar-toggle" id="bs-mobile-sidebar-toggle">
           <i class="fas fa-bars"></i>
         </button>
 
@@ -26,19 +26,19 @@
         </div>
       </div>
 
-      <button class="header-theme-toggle" id="theme-toggle">
+      <button class="header-action-button" id="theme-toggle">
         <i class="fas fa-moon"></i>
       </button>
     </div>
   </header>
 
   <!-- Sidebar Overlay for Mobile -->
-  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+  <div class="bs-sidebar-overlay" id="bs-sidebar-overlay"></div>
 
-  <div class="tutorial-wrapper">
+  <div class="bs-body-layout">
     <!-- Sidebar -->
-    <aside class="tutorial-sidebar" id="tutorial-sidebar">
-      <nav class="sidebar-nav">
+    <aside class="bs-sidebar" id="bs-sidebar">
+      <nav class="bs-sidebar-nav">
         <a href="#overview" class="active"><i class="fas fa-home"></i> Overview</a>
         <a href="#chart"><i class="fas fa-chart-line"></i> Chart</a>
         <a href="#summary"><i class="fas fa-file-alt"></i> Summary</a>
@@ -51,39 +51,38 @@
     </aside>
 
     <!-- Main Content -->
-    <main class="tutorial-content">
+    <main class="bs-body-content">
       <!-- Hero Section -->
-      <section class="tutorial-hero" id="overview">
+      <section class="bs-hero-section" id="overview">
         <h1>Retirement Planner</h1>
-        <p class="tutorial-intro">
-          The Retirement Planner helps you:
-        </p>
 
-        <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon"><i class="fas fa-calculator"></i></div>
+        <div class="bs-image-container">
+          <img src="images/rp_plan_01.png" alt="Retirement Planner Main Screen" class="bs-body-image">
+        </div>
+
+        <p class="body-text-large">The Retirement Planner helps you:</p>
+
+        <div class="bs-adaptive-grid">
+          <div class="bs-adaptive-grid-card">
+            <div class="bs-adaptive-grid-icon"><i class="fas fa-calculator"></i></div>
             <h3>Plan Your Savings</h3>
             <p>Plan how much money you may have when you retire</p>
           </div>
-          <div class="feature-card">
-            <div class="feature-icon"><i class="fas fa-chart-area"></i></div>
+          <div class="bs-adaptive-grid-card">
+            <div class="bs-adaptive-grid-icon"><i class="fas fa-chart-area"></i></div>
             <h3>Visualize Growth</h3>
             <p>See how your savings could grow over time</p>
           </div>
-          <div class="feature-card">
-            <div class="feature-icon"><i class="fas fa-bullseye"></i></div>
+          <div class="bs-adaptive-grid-card">
+            <div class="bs-adaptive-grid-icon"><i class="fas fa-bullseye"></i></div>
             <h3>Track Progress</h3>
             <p>Understand whether your current path is on track</p>
           </div>
-          <div class="feature-card">
-            <div class="feature-icon"><i class="fas fa-balance-scale"></i></div>
+          <div class="bs-adaptive-grid-card">
+            <div class="bs-adaptive-grid-icon"><i class="fas fa-balance-scale"></i></div>
             <h3>Compare Reality</h3>
             <p>Compare your plan with what is actually happening in real life</p>
           </div>
-        </div>
-
-        <div class="tutorial-image-container">
-          <img src="images/rp_plan_01.png" alt="Retirement Planner Main Screen" class="tutorial-image">
         </div>
 
         <p>The planner shows <strong>three possible outcomes</strong>, these outcomes help you prepare for uncertainty:
@@ -95,7 +94,7 @@
         </ul>
 
         <p>The screen is divided into these sections:</p>
-        <div class="button-grid">
+        <div class="button-grid-last">
           <a href="#chart" class="bs-button">Chart</a>
           <a href="#summary" class="bs-button">Summary</a>
           <a href="#plan-setup" class="bs-button">Plan Setup</a>
@@ -110,22 +109,21 @@
         <p>The chart is a visual timeline of your retirement journey. It shows how your total savings balance may change
           from start through retirement.</p>
 
-        <div class="tutorial-image-container">
-          <img src="images/rp_chart_01.png" alt="Retirement Planner Chart" class="tutorial-image">
+        <div class="bs-image-container">
+          <img src="images/rp_chart_01.png" alt="Retirement Planner Chart" class="bs-body-image">
         </div>
 
         <h3>Chart shows Two Types of Lines</h3>
         <div class="card-grid">
           <div class="bs-card">
             <h4>Plan</h4>
-            <p>Shows what <em>should</em> happen if everything goes according to the plan you set up.</p>
+            <p>Shows what should happen if everything goes according to the plan you set up.</p>
             <p>Based only on the values you enter (expected income, savings, retirement age, etc.).</p>
             <p><span class="small-changes-compound-message"></span></p>
           </div>
           <div class="bs-card">
             <h4>Reality</h4>
-            <p>Shows what is <em>actually</em> happening based on your real account balances and transactions so far.
-            </p>
+            <p>Shows what is actually happening based on your real account balances and transactions so far.</p>
             <p>Uses real data up to current year, then projects the future using your plan settings.</p>
             <p><span class="enough-data-message"></span></p>
           </div>
@@ -143,13 +141,13 @@
         <p>The shaded area between best and worst shows how much outcomes can vary.</p>
 
         <h3>Uncertainty Bands Toggle</h3>
-        <ul class="simple-list">
+        <ul class="bs-list">
           <li><i class="fas fa-toggle-on"></i><strong>On</strong>Shows best and worst case ranges</li>
           <li><i class="fas fa-toggle-off"></i><strong>Off</strong>Shows only the normal projection</li>
         </ul>
 
-        <div class="tutorial-image-container">
-          <img src="images/rp_chart_wo_uncertainty_01.png" alt="Uncertainty Bands Toggle" class="tutorial-image">
+        <div class="bs-image-container">
+          <img src="images/rp_chart_wo_uncertainty_01.png" alt="Uncertainty Bands Toggle" class="bs-body-image">
         </div>
 
         <p><strong>Include Assets</strong><br>
@@ -157,15 +155,15 @@
         </p>
 
         <h3>Full Timeline Toggle</h3>
-        <ul class="simple-list">
+        <ul class="bs-list">
           <li><i class="fas fa-toggle-on"></i><strong>On</strong>Shows the full timeline until the end of retirement
           </li>
           <li><i class="fas fa-toggle-off"></i><strong>Off</strong>Stops the chart when your balance reaches zero (or
             the lowest point before retirement)</li>
         </ul>
 
-        <div class="tutorial-image-container">
-          <img src="images/rp_chart_full_timeline_01.png" alt="Full Timeline Toggle" class="tutorial-image">
+        <div class="bs-image-container-last">
+          <img src="images/rp_chart_full_timeline_01.png" alt="Full Timeline Toggle" class="bs-body-image">
         </div>
       </section>
 
@@ -188,7 +186,7 @@
         </div>
 
         <p><strong>Real-Life Outcome details:</strong></p>
-        <ul class="simple-list">
+        <ul class="bs-list">
           <li><i class="fas fa-circle"></i> Uses your real historical data (transactions, balances, income, expenses,
             assets, liabilities)</li>
           <li><i class="fas fa-circle"></i> Projects your future retirement outcome based on how you are actually
@@ -204,8 +202,8 @@
           <li><i class="fas fa-arrow-down"></i><strong>Worst case</strong> scenario</li>
         </ul>
 
-        <div class="tutorial-image-container">
-          <img src="images/rp_plan_summary_01.png" alt="Retirement Planner Summary" class="tutorial-image">
+        <div class="bs-image-container">
+          <img src="images/rp_plan_summary_01.png" alt="Retirement Planner Summary" class="bs-body-image">
         </div>
 
         <p>The messages tell you whether:</p>
@@ -222,8 +220,8 @@
         <p>This section is where you enter details about your working years, savings behavior, and your retirement plan
           assumptions.</p>
 
-        <div class="tutorial-image-container">
-          <img src="images/rp_plan_setup_01.png" alt="Retirement Plan Setup" class="tutorial-image">
+        <div class="bs-image-container">
+          <img src="images/rp_plan_setup_01.png" alt="Retirement Plan Setup" class="bs-body-image">
         </div>
 
         <ul class="icon-list">
@@ -326,8 +324,8 @@
         <h2>Retirement Setup</h2>
         <p>These settings define your retirement lifestyle and income.</p>
 
-        <div class="tutorial-image-container">
-          <img src="images/rp_plan_setup_02.png" alt="Retirement Setup" class="tutorial-image">
+        <div class="bs-image-container">
+          <img src="images/rp_plan_setup_02.png" alt="Retirement Setup" class="bs-body-image">
         </div>
 
         <ul class="icon-list">
@@ -386,8 +384,8 @@
         <p>The projections table shows your retirement plan year by year.</p>
         <p>Each row represents one year of your life.</p>
 
-        <div class="tutorial-image-container-sm">
-          <img src="images/rp_table_01.png" alt="Year-by-Year Projections Table" class="tutorial-image">
+        <div class="bs-image-container-sm">
+          <img src="images/rp_table_01.png" alt="Year-by-Year Projections Table" class="bs-body-image">
         </div>
 
         <ul class="icon-list">
@@ -448,16 +446,16 @@
       <section class="section" id="how-to-use">
         <h2>How to use this planner effectively</h2>
         <ul class="icon-list">
-          <li><i class="fas fa-check-circle"></i> Start with realistic numbers</li>
-          <li><i class="fas fa-sync-alt"></i> Review both Plan and Reality projections</li>
+          <li><i class="fas fa-check-circle"></i> Start with realistic numbers.</li>
+          <li><i class="fas fa-sync-alt"></i> Review both Plan and Reality projections.</li>
           <li><i class="fas fa-database"></i> <span class="enough-data-message"></span></li>
-          <li><i class="fas fa-exclamation-triangle"></i> Pay attention to worst case scenarios</li>
-          <li><i class="fas fa-wrench"></i> Adjust savings, expenses, or retirement age if needed</li>
+          <li><i class="fas fa-exclamation-triangle"></i> Pay attention to worst case scenarios.</li>
+          <li><i class="fas fa-wrench"></i> Adjust savings, expenses, or retirement age if needed.</li>
         </ul>
       </section>
 
       <!-- Disclaimer Section -->
-      <section class="section" id="disclaimer">
+      <section class="warning-card" id="disclaimer">
         <h2>Important Disclaimer</h2>
         <p>This Retirement Planner is a <strong>forecasting and educational tool only</strong>. It is not financial,
           investment, tax, or legal advice. The projections are estimates based on the information you provide and
@@ -468,136 +466,46 @@
     </main>
   </div>
 
-  <!-- Go to Top Button -->
-  <button class="go-to-top" id="go-to-top">
-    <i class="fas fa-chevron-up"></i>
-  </button>
+  <button class="go-to-top-button" id="go-to-top-button"><i class="fas fa-chevron-up"></i></button>
+
+  <script src="../../common/js/bs_ui_commons.js"></script>
 
   <script>
-    const themeToggle = document.getElementById('theme-toggle');
-    const themeIcon = themeToggle.querySelector('i');
-
-    // Check for saved theme or system preference
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const savedTheme = localStorage.getItem('theme');
-
-    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-      document.body.classList.add('dark-mode');
-      themeIcon.className = 'fas fa-sun';
-    }
-
-    themeToggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-
-      if (document.body.classList.contains('dark-mode')) {
-        localStorage.setItem('theme', 'dark');
-        themeIcon.className = 'fas fa-sun';
-      } else {
-        localStorage.setItem('theme', 'light');
-        themeIcon.className = 'fas fa-moon';
+    initUIBehaviors({
+      theme: {
+        toggleSelector: '#theme-toggle',
+        rootSelector: 'body',
+        darkClass: 'dark-mode',
+        storageKey: 'theme',
+        followSystem: true,
+        iconOnDark: 'fas fa-sun',
+        iconOnLight: 'fas fa-moon'
+      },
+      sidebar: {
+        toggleSelector: '#bs-mobile-sidebar-toggle',
+        sidebarSelector: '#bs-sidebar',
+        overlaySelector: '#bs-sidebar-overlay',
+        linkSelector: '.bs-sidebar-nav a',
+        activeClass: 'active',
+        lockScroll: true,
+        desktopBreakpoint: 1024
+      },
+      goToTop: {
+        selector: '#go-to-top-button',
+        visibleClass: 'visible',
+        threshold: 300
       }
     });
 
-    // Mobile Sidebar Toggle
-    const mobileSidebarToggle = document.getElementById('mobile-sidebar-toggle');
-    const manualSidebar = document.getElementById('tutorial-sidebar');
-    const sidebarOverlay = document.getElementById('sidebar-overlay');
-    const sidebarLinks = document.querySelectorAll('.sidebar-nav a');
-
-    function openSidebar() {
-      manualSidebar.classList.add('active');
-      sidebarOverlay.classList.add('active');
-      // Prevent body scroll when sidebar is open
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeSidebar() {
-      manualSidebar.classList.remove('active');
-      sidebarOverlay.classList.remove('active');
-      // Re-enable body scroll when sidebar is closed
-      document.body.style.overflow = '';
-    }
-
-    function toggleSidebar() {
-      if (manualSidebar.classList.contains('active')) {
-        closeSidebar();
-      } else {
-        openSidebar();
-      }
-    }
-
-    mobileSidebarToggle.addEventListener('click', toggleSidebar);
-    sidebarOverlay.addEventListener('click', closeSidebar);
-
-    // Close sidebar when clicking on links (mobile)
-    sidebarLinks.forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-
-        if (window.innerWidth < 1024) {
-          closeSidebar();
-        }
-
-        // Get the target section
-        const targetId = link.getAttribute('href');
-        if (targetId && targetId !== '#') {
-          const targetElement = document.querySelector(targetId);
-          if (targetElement) {
-            window.scrollTo({
-              top: targetElement.offsetTop,
-              behavior: 'smooth'
-            });
-          }
-        }
-
-        // DO NOT update active link here - let IntersectionObserver handle it
-      });
-    });
-
-    // Close sidebar when pressing Escape key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && manualSidebar.classList.contains('active')) {
-        closeSidebar();
-      }
-    });
-
-    // Window resize handler
-    let resizeTimeout;
-    window.addEventListener('resize', () => {
-      clearTimeout(resizeTimeout);
-      resizeTimeout = setTimeout(() => {
-        if (window.innerWidth >= 1024) {
-          closeSidebar();
-        }
-      }, 100);
-    });
-
-    const goToTopButton = document.getElementById('go-to-top');
-
-    // Show/hide go to top button based on scroll position
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        goToTopButton.classList.add('visible');
-      } else {
-        goToTopButton.classList.remove('visible');
-      }
-    });
-
-    // Scroll to top when clicked
-    goToTopButton.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-
-    // Update active link on scroll with reduced threshold for better detection
+    // Update active link on scroll
     const sections = document.querySelectorAll('section');
     const observerOptions = {
       root: null,
       rootMargin: '-80px 0px -51% 0px',
       threshold: 0.05
     };
+
+    const sidebarLinks = document.querySelectorAll('.bs-sidebar-nav a');
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -607,7 +515,7 @@
           sidebarLinks.forEach(link => link.classList.remove('active'));
 
           // Set only the current section's link as active
-          const activeLink = document.querySelector(`.sidebar-nav a[href="#${id}"]`);
+          const activeLink = document.querySelector(`.bs-sidebar-nav a[href="#${id}"]`);
           if (activeLink) {
             activeLink.classList.add('active');
           }

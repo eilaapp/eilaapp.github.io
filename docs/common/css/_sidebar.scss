@@ -1,0 +1,197 @@
+/* Sidebar - Desktop: always visible, Mobile: hidden by default */
+.bs-sidebar {
+    position: fixed;
+    top: calc(var(--header-height) + var(--spacing-lg));
+    left: calc(50% - var(--max-width) / 2 + var(--spacing-md));
+    width: var(--sidebar-width);
+    background: var(--surface-bright-color);
+    border-radius: var(--card-radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow);
+    border: none;
+    height: -moz-fit-content;
+    height: fit-content;
+    max-height: calc(100vh - var(--header-height) - var(--spacing-xl) * 2);
+    overflow-y: auto;
+    z-index: 999;
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+.bs-sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xxs);
+}
+
+/* Desktop style for navigation items */
+.bs-sidebar-nav a {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm);
+    color: var(--secondary-color);
+    text-decoration: none;
+    border-radius: var(--spacing-sm);
+    transition: var(--transition);
+    font-size: 0.95rem;
+    position: relative;
+    will-change: transform, color;
+}
+
+.bs-sidebar-nav a:hover {
+    color: var(--primary-color);
+}
+
+.bs-sidebar-nav a.active {
+    color: var(--primary-color);
+    transition: color 0.1s ease;
+}
+
+/* Active navigation item indicator  */
+.bs-sidebar-nav a.active::before {
+    content: "";
+    position: absolute;
+    left: 8px;
+    width: 6px;
+    height: 6px;
+    border-radius: var(--circular-radius);
+    background: var(--primary-color);
+}
+
+.bs-sidebar-nav i {
+    width: 20px;
+    text-align: center;
+    font-size: 1rem;
+    margin-left: 4px;
+}
+
+/* Mobile style for navigation items */
+@media (max-width: 1024px) {
+    .bs-sidebar-nav a {
+        background: transparent;
+    }
+
+    .bs-sidebar-nav a:hover {
+        background: var(--primary-container-color);
+        color: var(--on-surface-color);
+    }
+
+    .bs-sidebar-nav a.active {
+        background: var(--primary-color);
+        color: var(--on-primary-color);
+        box-shadow: var(--shadow-sm);
+    }
+
+    /* Remove active navigation item indicator for mobile */
+    .bs-sidebar-nav a.active::before {
+        display: none;
+    }
+
+    .bs-sidebar-nav i {
+        margin-left: 0;
+    }
+
+    /* Mobile sidebar behavior (keeps sidebar-media with component) */
+    .bs-sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 300px;
+        height: 100vh;
+        z-index: 1003;
+        border-radius: 0 !important;
+        border-top-left-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
+        border-top-right-radius: var(--card-radius-lg) !important;
+        border-bottom-right-radius: var(--card-radius-lg) !important;
+        transform: translateX(-100%);
+        padding: var(--spacing-lg);
+        max-height: 100vh;
+        box-shadow: var(--shadow-lg);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .bs-sidebar.active {
+        transform: translateX(0);
+    }
+}
+
+/* Sidebar overlay for mobile */
+.bs-sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1002;
+    opacity: 0;
+    transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: opacity;
+}
+
+.bs-sidebar-overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+@media (min-width: 1025px) {
+    .bs-sidebar-overlay {
+        display: none !important;
+    }
+}
+
+/* Custom scrollbar for sidebar (kept with sidebar) */
+.bs-sidebar::-webkit-scrollbar {
+    width: 4px;
+}
+
+.bs-sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.bs-sidebar::-webkit-scrollbar-thumb {
+    background: var(--outline-variant-color);
+    border-radius: 2px;
+}
+
+.bs-sidebar::-webkit-scrollbar-thumb:hover {
+    background: var(--outline-color);
+}
+
+/* Mobile Sidebar Toggle in Header */
+.bs-mobile-sidebar-toggle {
+    @extend .header-action-button;
+}
+
+@media (max-width: 768px) {
+    /* Non-rounded left corners on mobile sidebar */
+    .bs-sidebar {
+        border-radius: var(--card-radius-md);
+        border-top-left-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
+        border-top-right-radius: var(--card-radius-md) !important;
+        border-bottom-right-radius: var(--card-radius-md) !important;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .bs-sidebar {
+        border-radius: var(--card-radius-md);
+    }
+}
+
+@media (min-width: 1025px) {
+    .bs-mobile-sidebar-toggle {
+        display: none;
+    }
+}
+
+/* Medium-screen adjustment (keeps sidebar positioned close to content on mid-width viewports) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .bs-sidebar {
+        left: var(--spacing-md);
+    }
+}
