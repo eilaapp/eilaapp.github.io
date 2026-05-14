@@ -3,20 +3,20 @@
     <channel>
         <title>Currency Converter - Appcast</title>
         <item>
-            <title>Version 0.2.1</title>
+            <title>Version 0.2.5</title>
             <!-- Description should contain the release notes -->
             <description>Put release notes here</description>
-            <pubDate>Thu 5 Feb 2026 12:00:00 +0000</pubDate>
-            <sparkle:version>0.2.1</sparkle:version>
+            <pubDate>Wed 6 May 2026 12:00:00 +0000</pubDate>
+            <sparkle:version>0.2.5</sparkle:version>
             <enclosure url="https://play.google.com/store/apps/details?id=com.burusho.converter" sparkle:os="android" />
 			      <!-- Use criticalUpdate to publish a critical update -->
             <!-- <sparkle:tags> <sparkle:criticalUpdate /> </sparkle:tags> -->
         </item>
         <item>
-            <title>Version 0.2.3</title>
+            <title>Version 0.2.5</title>
             <description>Put release notes here</description>
-            <pubDate>Fri 20 Feb 2026 12:00:00 +0000</pubDate>
-            <sparkle:version>0.2.3</sparkle:version>
+            <pubDate>Wed 6 May 2026 12:00:00 +0000</pubDate>
+            <sparkle:version>0.2.5</sparkle:version>
             <enclosure url="https://apps.apple.com/app/id6752357221" sparkle:os="iOS" />
         </item>
     </channel>
